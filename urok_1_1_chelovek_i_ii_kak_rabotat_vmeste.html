@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 1.1 — Человек + ИИ: как работать вместе</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Arial',sans-serif;background:#faf6f4;color:#241512;font-size:14px}
+
+/* ===== ЦВЕТА ЛОГОТИПА ETHOS ===== */
+.crumb{display:flex;align-items:center;gap:8px;background:#fff;border-bottom:1px solid #e7d9d3;padding:9px 20px;font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#a3897f;flex-wrap:wrap}
+.crumb b{color:#7A2A1C}
+.crumb .sep{color:#d3b4a9}
+
+.masthead{background:#7A2A1C;padding:30px 24px 24px;position:relative;overflow:hidden}
+.masthead-rule{height:4px;background:#fff;margin-bottom:3px}
+.masthead-rule2{height:1px;background:rgba(255,255,255,0.25);margin-bottom:18px}
+.masthead-eye{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:10px}
+.masthead-title{font-size:24px;font-weight:900;color:#fff;line-height:1.15;margin-bottom:10px;position:relative;z-index:1}
+.masthead-sub{font-size:12px;color:rgba(255,255,255,0.72);line-height:1.6;max-width:480px;position:relative;z-index:1}
+.masthead-deco{position:absolute;right:16px;top:10px;font-size:80px;font-weight:900;color:rgba(255,255,255,0.07);line-height:1;user-select:none}
+
+.intro-wrap{padding:18px 20px 6px}
+.intro-label{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#a3897f;margin-bottom:10px}
+.principle{background:#7A2A1C;color:#fff;padding:16px 18px;margin:12px 0 4px;border-radius:2px}
+.principle-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:8px}
+.principle-body{font-size:13.5px;line-height:1.65;font-weight:700}
+
+.mod-divider{background:#241512;color:#fff;padding:14px 20px;font-size:9.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-top:22px}
+.mod-divider .num{background:#7A2A1C;padding:4px 9px;font-size:11px}
+
+.lesson-head{padding:20px 20px 4px}
+.lesson-eye{font-size:9.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#c3a89d;margin-bottom:6px}
+.lesson-title{font-size:19px;font-weight:900;color:#241512;line-height:1.25}
+
+.content{padding:6px 20px 26px}
+.p{font-size:12.8px;color:#3a2b26;line-height:1.75;margin:12px 0}
+.sub-head{font-size:12.5px;font-weight:800;color:#5C2015;text-transform:uppercase;letter-spacing:0.5px;margin:22px 0 8px}
+.sub-head.first{margin-top:16px}
+
+ul.content-list{list-style:none;margin:6px 0 14px}
+ul.content-list li{font-size:12.5px;color:#3a2b26;padding:6px 0 6px 18px;border-bottom:0.5px solid #f0e5e0;line-height:1.55;position:relative}
+ul.content-list li:last-child{border-bottom:none}
+ul.content-list li::before{content:'—';color:#c3a89d;position:absolute;left:0}
+
+.vs-wrap{display:grid;grid-template-columns:1fr 1fr;border:1px solid #e7d9d3;margin:10px 0 16px;background:#fff}
+.vs-col{padding:12px 14px}
+.vs-col+.vs-col{border-left:1px solid #e7d9d3}
+.vs-head{font-size:9.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:9px;display:flex;align-items:center;gap:6px}
+.vs-head.bad{color:#a13a24}
+.vs-head.bad::before{content:'✕';font-size:11px}
+.vs-head.good{color:#2e7d4f}
+.vs-head.good::before{content:'✓';font-size:11px}
+.vs-item{font-size:12px;color:#3a2b26;padding:6px 0;border-bottom:0.5px solid #f0e5e0;line-height:1.5}
+.vs-item:last-child{border-bottom:none}
+
+.lesson-nav{display:flex;border-top:2px solid #7A2A1C;background:#fff}
+.lesson-nav a{flex:1;padding:16px 20px;text-decoration:none;color:#241512;font-size:11.5px}
+.lesson-nav a:last-child{text-align:right;border-left:1px solid #e7d9d3}
+.lesson-nav .lbl{display:block;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#a3897f;margin-bottom:4px}
+.lesson-nav .ttl{font-weight:800;color:#7A2A1C}
+
+@media(max-width:480px){
+  .masthead-title{font-size:19px}
+  .vs-wrap{grid-template-columns:1fr}
+  .vs-col+.vs-col{border-left:none;border-top:1px solid #e7d9d3}
+}
+</style>
+</head>
+<body>
+
+<div class="crumb">
+  <span>Модуль 1: Основы ИИ и цифровая гигиена</span><span class="sep">▸</span><b>Урок 1.1</b>
+</div>
+
+<div class="masthead">
+  <div class="masthead-deco">ИИ</div>
+  <div class="masthead-eye">Мини-курс для российского соискателя · Длительность: 45-50 минут</div>
+  <div class="masthead-rule"></div>
+  <div class="masthead-rule2"></div>
+  <div class="masthead-title">ИИ для карьеры: бренд, резюме и поиск работы</div>
+  <div class="masthead-sub">Нейросети не ищут работу за человека. Они не заменяют опыт, мышление, реальные навыки и живую коммуникацию.</div>
+</div>
+
+<div class="intro-wrap">
+  <div class="intro-label">Главная идея курса</div>
+  <div class="p">Но они помогают быстрее и точнее показать то, что у кандидата уже есть: опыт, сильные стороны, достижения, логику карьерного перехода, мотивацию и профессиональную ценность.</div>
+  <div class="principle">
+    <div class="principle-title">Главный принцип курса</div>
+    <div class="principle-body">ИИ не должен придумывать за вас карьерную историю. Он должен помочь вам собрать, структурировать и усилить настоящую.</div>
+  </div>
+</div>
+
+<div class="mod-divider">
+  <span class="num">01</span>
+  <span>🌐 Модуль 1: Основы ИИ и цифровая гигиена</span>
+</div>
+
+<div class="lesson-head">
+  <div class="lesson-eye">Урок 1.1</div>
+  <div class="lesson-title">Человек + ИИ: как работать вместе</div>
+</div>
+
+<div class="content">
+
+  <div class="p">Нейросети уже стали частью поиска работы. Кандидаты используют их для резюме, сопроводительных писем, сообщений рекрутерам, подготовки к интервью, оформления портфолио и профессиональных профилей.</div>
+  <div class="p">Но проблема в том, что большинство использует ИИ одинаково: просит &ldquo;написать красивый текст&rdquo; и получает гладкую, но пустую формулировку. Такой текст может выглядеть профессионально, но не помогает пройти отбор, если в нем нет конкретики.</div>
+  <div class="p">Этот курс не про то, как &ldquo;обмануть&rdquo; рекрутера с помощью ИИ. Он про то, как использовать нейросети как карьерный инструмент, чтобы:</div>
+  <ul class="content-list">
+    <li>точнее сформулировать опыт;</li>
+    <li>адаптировать резюме под вакансию;</li>
+    <li>подготовиться к интервью;</li>
+    <li>оформить портфолио;</li>
+    <li>не выглядеть как кандидат, который просто нажал кнопку &ldquo;сгенерировать&rdquo;.</li>
+  </ul>
+
+  <div class="sub-head first">Что ИИ может и чего не может</div>
+  <div class="vs-wrap">
+    <div class="vs-col">
+      <div class="vs-head good">ИИ может</div>
+      <div class="vs-item">помочь правильно сформулировать ваш опыт;</div>
+      <div class="vs-item">найти слабые места в резюме;</div>
+      <div class="vs-item">сравнить резюме с вакансией;</div>
+      <div class="vs-item">Создать структуру сопроводительного письма;</div>
+      <div class="vs-item">подготовить вопросы для интервью для тренировки;</div>
+      <div class="vs-item">провести тренировочное собеседование;</div>
+      <div class="vs-item">объяснить, где текст звучит шаблонно;</div>
+      <div class="vs-item">помочь оформить портфолио;</div>
+      <div class="vs-item">сделать краткое саммари проекта;</div>
+      <div class="vs-item">адаптировать пост под разные каналы поиска работы.</div>
+    </div>
+    <div class="vs-col">
+      <div class="vs-head bad">ИИ не может</div>
+      <div class="vs-item">заменить реальный опыт;</div>
+      <div class="vs-item">честно подтвердить навыки, которых у вас нет;</div>
+      <div class="vs-item">понять причину отказа работодателя;</div>
+      <div class="vs-item">гарантировать приглашение на интервью;</div>
+      <div class="vs-item">полностью понимать контекст вашей карьеры без ваших пояснений;</div>
+    </div>
+  </div>
+  <div class="p">Правильная роль ИИ в поиске работы: не автор вместо вас, а редактор, тренер и аналитик.</div>
+
+  <div class="sub-head">Базовое правило работы с нейросетью наглядно</div>
+  <div class="vs-wrap">
+    <div class="vs-col">
+      <div class="vs-head bad">Плохая логика</div>
+      <div class="vs-item">&ldquo;Напиши мне идеальное резюме&rdquo;.</div>
+    </div>
+    <div class="vs-col">
+      <div class="vs-head good">Хорошая логика</div>
+      <div class="vs-item">&ldquo;Помоги мне разобраться, что в моем опыте важно для этой вакансии, какие факты нужно уточнить и как сформулировать это честно и убедительно&rdquo;.</div>
+    </div>
+  </div>
+  <div class="p">В этом курсе мы будем использовать ИИ не как кнопку генерации, а как собеседника, который задает вопросы, структурирует ответы и помогает собрать сильную карьерную историю.</div>
+
+  <div class="sub-head">Что будет на выходе после курса</div>
+  <div class="p">После курса у вас будет не просто понимание, &ldquo;как пользоваться ChatGPT&rdquo;, а набор готовых полезных материалов, которые пригодятся при работе в составлении резюме и поиске работы. К концу курса вы сможете собрать:</div>
+  <ul class="content-list">
+    <li>сильный блок &ldquo;О себе&rdquo;;</li>
+    <li>3-5 достижений по формуле &ldquo;действие + масштаб + результат&rdquo;;</li>
+    <li>список ключевых слов под целевую вакансию;</li>
+    <li>адаптированное резюме под конкретную позицию;</li>
+    <li>короткое сопроводительное письмо;</li>
+    <li>сообщение рекрутеру или знакомому для нетворкинга;</li>
+    <li>пост для Telegram-канала или VK-сообщества;</li>
+    <li>5 историй для интервью по методу STAR;</li>
+    <li>краткое саммари кейса для портфолио;</li>
+    <li>чек-лист безопасного использования ИИ.</li>
+  </ul>
+  <div class="p">Главная цель: не просто сделать текст красивее, а повысить шанс, что ваш опыт будет правильно считан человеком и алгоритмом.</div>
+
+</div>
+
+<div class="lesson-nav">
+  <a href="urok_1_2_neyroseti_chto_i_kogda_ispolzovat.html" style="text-align:right;width:100%">
+    <span class="lbl">Далее</span>
+    <span class="ttl">Урок 1.2 — Нейросети: что и когда использовать →</span>
+  </a>
+</div>
+
+</body>
+</html>

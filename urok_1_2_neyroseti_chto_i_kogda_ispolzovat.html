@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 1.2 — Нейросети: что и когда использовать</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Arial',sans-serif;background:#faf6f4;color:#241512;font-size:14px}
+
+.crumb{display:flex;align-items:center;gap:8px;background:#fff;border-bottom:1px solid #e7d9d3;padding:9px 20px;font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#a3897f;flex-wrap:wrap}
+.crumb b{color:#7A2A1C}
+.crumb .sep{color:#d3b4a9}
+
+.mod-bar{background:#7A2A1C;color:#fff;padding:11px 20px;font-size:9.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.mod-bar .num{background:rgba(255,255,255,0.18);padding:3px 8px;font-size:10px}
+
+.lesson-head{padding:22px 20px 4px;border-bottom:2px solid #7A2A1C}
+.lesson-eye{font-size:9.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#c3a89d;margin-bottom:6px}
+.lesson-title{font-size:20px;font-weight:900;color:#241512;line-height:1.25;padding-bottom:18px}
+
+.content{padding:6px 20px 26px}
+.p{font-size:12.8px;color:#3a2b26;line-height:1.75;margin:12px 0}
+.sub-head{font-size:12.5px;font-weight:800;color:#5C2015;text-transform:uppercase;letter-spacing:0.5px;margin:22px 0 8px}
+
+ul.content-list{list-style:none;margin:6px 0 14px}
+ul.content-list li{font-size:12.5px;color:#3a2b26;padding:6px 0 6px 18px;border-bottom:0.5px solid #f0e5e0;line-height:1.55;position:relative}
+ul.content-list li:last-child{border-bottom:none}
+ul.content-list li::before{content:'—';color:#c3a89d;position:absolute;left:0}
+
+.tool-cat{margin:6px 0 16px}
+.tool-cat-title{font-size:11.5px;font-weight:800;color:#7A2A1C;margin-bottom:7px}
+
+.tool-table-wrap{border:1px solid #e7d9d3;margin:16px 0 16px;background:#fff}
+.tool-table-label{background:#241512;color:#fff;padding:8px 14px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.tool-search{border:none;background:rgba(255,255,255,0.12);color:#fff;padding:5px 9px;font-size:10.5px;border-radius:2px;width:120px}
+.tool-search::placeholder{color:rgba(255,255,255,0.5)}
+.tool-table{width:100%;border-collapse:collapse}
+.tool-table tr{border-bottom:1px solid #f0e5e0}
+.tool-table tr:last-child{border-bottom:none}
+.tool-table tr:hover{background:#fdf6f4}
+.tool-table td{padding:9px 14px;font-size:11.8px;color:#3a2b26;line-height:1.5;vertical-align:top}
+.tool-table td:first-child{font-weight:700;color:#5C2015;white-space:nowrap;width:38%}
+.tool-table tr.hidden{display:none}
+.tool-table-empty{padding:14px;text-align:center;font-size:11.5px;color:#a3897f;display:none}
+
+.lesson-nav{display:flex;border-top:2px solid #7A2A1C;background:#fff}
+.lesson-nav a{flex:1;padding:16px 20px;text-decoration:none;color:#241512;font-size:11.5px}
+.lesson-nav a:last-child{text-align:right;border-left:1px solid #e7d9d3}
+.lesson-nav .lbl{display:block;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#a3897f;margin-bottom:4px}
+.lesson-nav .ttl{font-weight:800;color:#7A2A1C}
+
+@media(max-width:480px){
+  .lesson-title{font-size:17px}
+  .tool-search{width:80px}
+}
+</style>
+</head>
+<body>
+
+<div class="crumb">
+  <span>Модуль 1: Основы ИИ и цифровая гигиена</span><span class="sep">▸</span><b>Урок 1.2</b>
+</div>
+
+<div class="mod-bar"><span class="num">01</span><span>🌐 Модуль 1: Основы ИИ и цифровая гигиена</span></div>
+
+<div class="lesson-head">
+  <div class="lesson-eye">Урок 1.2</div>
+  <div class="lesson-title">Нейросети: что и когда использовать</div>
+</div>
+
+<div class="content">
+
+  <div class="p">Не существует одной &ldquo;лучшей&rdquo; нейросети для поиска работы. Разные инструменты лучше подходят для разных задач.</div>
+
+  <div class="tool-cat">
+    <div class="tool-cat-title">Для текста, структуры и карьерной логики:</div>
+    <ul class="content-list">
+      <li>ChatGPT — резюме, сопроводительные письма, подготовка к интервью, анализ вакансий, голосовая тренировка;</li>
+      <li>Claude — длинные тексты, аккуратная редактура, разбор карьерной истории, портфолио;</li>
+      <li>Gemini — анализ документов, структурирование, идеи для профиля и подготовки;</li>
+      <li>GigaChat — русскоязычные тексты, резюме, письма, базовая генерация и редактирование;</li>
+      <li>Alice AI — быстрые тексты, идеи, переработка формулировок, генерация изображений и текстов.</li>
+    </ul>
+  </div>
+
+  <div class="tool-cat">
+    <div class="tool-cat-title">Для визуалов и фото:</div>
+    <ul class="content-list">
+      <li>Kandinsky — изображения и визуальные материалы;</li>
+      <li>Шедеврум — изображения, креативные варианты, идеи визуальной подачи;</li>
+      <li>Canva AI — оформление резюме, портфолио, профессиональных фото и презентаций.</li>
+    </ul>
+  </div>
+
+  <div class="tool-cat">
+    <div class="tool-cat-title">Для проверки резюме и ATS-логики:</div>
+    <ul class="content-list">
+      <li>Rezi; Teal; Kickresume; Jobscan и похожие сервисы.</li>
+    </ul>
+  </div>
+
+  <div class="p">Важно: инструмент не заменяет метод. Даже сильная модель даст слабый результат, если в запросе нет вакансии, фактов, ограничений и цели.</div>
+
+  <div class="tool-table-wrap">
+    <div class="tool-table-label">
+      <span>Что использовать под задачу</span>
+      <input class="tool-search" id="toolSearch" type="text" placeholder="Поиск…" oninput="filterTools(this.value)">
+    </div>
+    <table class="tool-table" id="toolTable">
+      <tbody>
+        <tr><td>Переписать опыт в достижения</td><td>ChatGPT, Claude, Gemeni, DeepSeek, Perplexity, GigaChat, YandexGPT (Алиса)</td></tr>
+        <tr><td>Сравнить резюме с вакансией</td><td>ChatGPT, Claude, Gemini, Rezi, Teal, DeepSeek, Perplexity, Jobscan, Monica</td></tr>
+        <tr><td>Сделать короткое сопроводительное</td><td>ChatGPT, GigaChat, YandexGPT (Алиса), Rytr</td></tr>
+        <tr><td>Подготовиться к интервью</td><td>Надиктовка ответа голосом с расшифровкой в ChatGPT Voice Mode, Claude, Gemini</td></tr>
+        <tr><td>Проверить ATS-совместимость</td><td>Rezi, Teal, Kickresume, Jobscan</td></tr>
+        <tr><td>Сделать саммари кейсов для портфолио</td><td>ChatGPT, Claude, DeepSeek, Perplexity, GigaChat</td></tr>
+        <tr><td>Оформить визуальное резюме или портфолио</td><td>Canva AI</td></tr>
+        <tr><td>Сделать профессиональное фото</td><td>Canva AI, Gemeni, специализированные AI headshot-сервисы</td></tr>
+        <tr><td>Сгенерировать визуал для проекта</td><td>Kandinsky, Шедеврум</td></tr>
+      </tbody>
+    </table>
+    <div class="tool-table-empty" id="toolEmpty">Ничего не найдено</div>
+  </div>
+
+  <div class="p">Практический вывод: не начинайте с выбора инструмента. Сначала определите задачу, а потом выбирайте модель.</div>
+  <div class="p">Со временем при использовании разных моделей выработаются предпочтения и находятся наиболее удобные инструменты под ваши запросы и цели.</div>
+
+</div>
+
+<div class="lesson-nav">
+  <a href="urok_1_1_chelovek_i_ii_kak_rabotat_vmeste.html">
+    <span class="lbl">Назад</span>
+    <span class="ttl">← Урок 1.1 — Человек + ИИ: как работать вместе</span>
+  </a>
+  <a href="urok_1_3_kak_bezopasno_rabotat_s_ii_i_lichnymi_dannymi.html">
+    <span class="lbl">Далее</span>
+    <span class="ttl">Урок 1.3 — Как безопасно работать с ИИ и личными данными →</span>
+  </a>
+</div>
+
+<script>
+function filterTools(q){
+  q=q.trim().toLowerCase();
+  var rows=document.querySelectorAll('#toolTable tr');
+  var visible=0;
+  rows.forEach(function(r){
+    var match=r.textContent.toLowerCase().indexOf(q)!==-1;
+    r.classList.toggle('hidden',!match);
+    if(match)visible++;
+  });
+  document.getElementById('toolEmpty').style.display=visible===0?'block':'none';
+}
+</script>
+</body>
+</html>

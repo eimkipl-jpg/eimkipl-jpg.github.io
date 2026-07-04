@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 1.3 — Как безопасно работать с ИИ и личными данными</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Arial',sans-serif;background:#faf6f4;color:#241512;font-size:14px}
+
+.crumb{display:flex;align-items:center;gap:8px;background:#fff;border-bottom:1px solid #e7d9d3;padding:9px 20px;font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#a3897f;flex-wrap:wrap}
+.crumb b{color:#7A2A1C}
+.crumb .sep{color:#d3b4a9}
+
+.mod-bar{background:#7A2A1C;color:#fff;padding:11px 20px;font-size:9.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.mod-bar .num{background:rgba(255,255,255,0.18);padding:3px 8px;font-size:10px}
+
+.lesson-head{padding:22px 20px 4px;border-bottom:2px solid #7A2A1C}
+.lesson-eye{font-size:9.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#c3a89d;margin-bottom:6px}
+.lesson-title{font-size:20px;font-weight:900;color:#241512;line-height:1.25;padding-bottom:18px}
+
+.content{padding:6px 20px 26px}
+.p{font-size:12.8px;color:#3a2b26;line-height:1.75;margin:12px 0}
+.sub-head{font-size:12.5px;font-weight:800;color:#5C2015;text-transform:uppercase;letter-spacing:0.5px;margin:22px 0 8px}
+.sub-head.first{margin-top:16px}
+
+.problem-list{margin:8px 0 14px}
+.problem{display:flex;gap:12px;padding:10px 0;border-bottom:0.5px solid #f0e5e0}
+.problem:last-child{border-bottom:none}
+.problem-n{width:24px;height:24px;background:#7A2A1C;color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;border-radius:50%}
+.problem-t{font-size:12.5px;color:#3a2b26;line-height:1.6}
+.problem-t b{color:#5C2015}
+
+.toggle-wrap{border:1px solid #e7d9d3;margin:14px 0 6px;background:#fff}
+.toggle-bar{display:flex;border-bottom:1px solid #e7d9d3}
+.toggle-btn{flex:1;padding:11px 10px;font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;text-align:center;background:#fff;border:none;cursor:pointer;color:#a3897f;transition:all 0.2s}
+.toggle-btn:first-child{border-right:1px solid #e7d9d3}
+.toggle-btn.active.bad{background:#fdf1ee;color:#a13a24}
+.toggle-btn.active.good{background:#f1f8f4;color:#2e7d4f}
+.toggle-panel{display:none;padding:16px}
+.toggle-panel.active{display:block}
+.toggle-lede{font-size:12px;color:#5a4640;line-height:1.6;margin-bottom:10px}
+.quote-block{background:#faf6f4;border-left:3px solid #d3b4a9;padding:12px 14px;font-size:12px;color:#3a2b26;line-height:1.65;font-style:italic;margin-bottom:12px}
+.toggle-panel.good .quote-block{border-left-color:#a9c9b4}
+.verdict{font-size:12px;color:#3a2b26;line-height:1.7}
+.verdict b{color:#5C2015}
+
+.lesson-nav{display:flex;border-top:2px solid #7A2A1C;background:#fff}
+.lesson-nav a{flex:1;padding:16px 20px;text-decoration:none;color:#241512;font-size:11.5px}
+.lesson-nav .lbl{display:block;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#a3897f;margin-bottom:4px}
+.lesson-nav .ttl{font-weight:800;color:#7A2A1C}
+
+@media(max-width:480px){
+  .lesson-title{font-size:17px}
+  .toggle-btn{font-size:9px}
+}
+</style>
+</head>
+<body>
+
+<div class="crumb">
+  <span>Модуль 1: Основы ИИ и цифровая гигиена</span><span class="sep">▸</span><b>Урок 1.3</b>
+</div>
+
+<div class="mod-bar"><span class="num">01</span><span>🌐 Модуль 1: Основы ИИ и цифровая гигиена</span></div>
+
+<div class="lesson-head">
+  <div class="lesson-eye">Урок 1.3</div>
+  <div class="lesson-title">Как безопасно работать с ИИ и личными данными</div>
+</div>
+
+<div class="content">
+
+  <div class="p">ИИ должен помогать вам, а не создавать юридические и репутационные риски.</div>
+
+  <div class="sub-head first">Три главные проблемы</div>
+  <div class="problem-list">
+    <div class="problem"><div class="problem-n">1</div><div class="problem-t"><b>Проблема 1. Выдуманные факты.</b> Не добавляйте опыт, проекты, навыки, цифры и сертификаты, которых не было.</div></div>
+    <div class="problem"><div class="problem-n">2</div><div class="problem-t"><b>Проблема 2. Навыки &ldquo;на всякий случай&rdquo;.</b> Если вы написали какие-либо навыки, то необходимо быть готовым показать, что вы действительно умеете это делать.</div></div>
+    <div class="problem"><div class="problem-n">3</div><div class="problem-t"><b>Проблема 3. Конфиденциальные и персональные данные.</b> Не загружайте в нейросеть документы с паспортными данными, телефонами, адресами, коммерческой тайной, данными клиентов и внутренней информацией компании.</div></div>
+  </div>
+
+  <div class="sub-head">Безопасность персональных данных и коммерческой тайны</div>
+  <div class="p">Перед загрузкой резюме, переписки или документов в нейросеть удалите: телефон; адрес; паспортные данные; дату рождения, если она не нужна для задачи; личные ссылки; имена клиентов; названия внутренних проектов; финансовые данные; данные коллег; коммерческую информацию.</div>
+
+  <div class="toggle-wrap">
+    <div class="toggle-bar">
+      <button class="toggle-btn bad active" id="btnBad" onclick="showToggle('bad')">Плохой пример</button>
+      <button class="toggle-btn good" id="btnGood" onclick="showToggle('good')">Хороший пример</button>
+    </div>
+    <div class="toggle-panel bad active" id="panelBad">
+      <div class="toggle-lede">Соискатель копирует в чат с нейросетью резюме целиком, как есть:</div>
+      <div class="quote-block">
+        «Иван Петров, +7 916 XXX-XX-XX, ivan.petrov1988@mail.ru, г. Москва, ул. Ленина, д. 12, кв. 45. Дата рождения: 14.03.1988. Паспорт 45 XX XXXXXX.<br><br>
+        Опыт: менеджер проектов в ООО &quot;Технострой&quot;, вёл проект для клиента ПАО &quot;Северсталь&quot; бюджетом 45 млн ₽, руководил внутренним проектом &quot;Феникс-2.0&quot; по замене ERP-системы. Зарплатные ожидания — от 250 000 ₽.<br><br>
+        Вот вакансия: [вставляет ссылку на вакансию]. Перепиши моё резюме под неё».
+      </div>
+      <div class="verdict"><b>Что здесь не так:</b> телефон, email, адрес, дата рождения и паспортные данные передаются нейросети без всякой необходимости — для переформулировки достижений эти поля вообще не нужны. Плюс утечка коммерческой информации: название реального клиента (ПАО «Северсталь»), внутреннее кодовое название проекта («Феникс-2.0») и точный бюджет — это могло быть конфиденциальной информацией по NDA с прошлого места работы, и её судьбу после отправки в чужой сервис соискатель не контролирует.</div>
+    </div>
+    <div class="toggle-panel good" id="panelGood">
+      <div class="toggle-lede">Тот же соискатель убирает всё лишнее до вставки в чат:</div>
+      <div class="quote-block">
+        «Опыт: менеджер проектов в IT-аутсорсинге. Вёл проект для крупного клиента из металлургической отрасли, бюджет проекта — 45 млн ₽. Руководил внутренним проектом по замене ERP-системы.<br><br>
+        Вот вакансия: [вставляет текст вакансии целиком, без ссылки, чтобы не передавать лишние метаданные]. Перепиши мои достижения под требования этой вакансии, не добавляя цифр и фактов, которых нет в моём описании».
+      </div>
+      <div class="verdict"><b>Что здесь правильно:</b> контактные данные, дата рождения и паспорт вообще не упоминаются — они физически не нужны для задачи «переформулировать текст». Название клиента заменено на обобщение («крупный клиент из металлургической отрасли») — конкретика по масштабу сохранена, а идентифицирующая информация убрана. Внутреннее кодовое имя проекта заменено на описание сути. И отдельно — прямой запрет нейросети выдумывать цифры, что закрывает риск «галлюцинации» задним числом.</div>
+    </div>
+  </div>
+
+  <div class="p">Принцип простой: загружайте только то, что нужно для задачи, и убирайте все лишнее.</div>
+
+</div>
+
+<div class="lesson-nav">
+  <a href="urok_1_2_neyroseti_chto_i_kogda_ispolzovat.html">
+    <span class="lbl">Назад</span>
+    <span class="ttl">← Урок 1.2 — Нейросети: что и когда использовать</span>
+  </a>
+</div>
+
+<script>
+function showToggle(which){
+  document.getElementById('btnBad').classList.toggle('active',which==='bad');
+  document.getElementById('btnGood').classList.toggle('active',which==='good');
+  document.getElementById('panelBad').classList.toggle('active',which==='bad');
+  document.getElementById('panelGood').classList.toggle('active',which==='good');
+}
+</script>
+</body>
+</html>
